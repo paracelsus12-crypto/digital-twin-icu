@@ -17,8 +17,18 @@ st.set_page_config(
 # Завантаження моделей
 @st.cache_resource
 def load_all_models():
+# Завантаження моделей
+@st.cache_resource
+def load_all_models():
     models = {}
-    base_path = os.path.dirname(os.path.abspath(__file__)) if '__file__' in globals() else os.getcwd()
+    # Отримуємо шлях до web_app папки
+    if '__file__' in globals():
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    else:
+        base_path = os.getcwd()
+    
+    # Шлях до моделей: ../models/
+    models_path = os.path.join(base_path, '..', 'models')
     
     surgery_types = {
         'cardiac': ['aki', 'delirium', 'respiratory', 'infection', 'af', 'lco', 'stroke'],
@@ -30,17 +40,35 @@ def load_all_models():
     
     for surgery_type, complications in surgery_types.items():
         models[surgery_type] = {}
+        surgery_path = os.path.join(models_path, surgery_type)
+        
         for comp in complications:
             try:
                 # Спочатку пробуємо v3 (з VTE для абдомінальної)
-                model_path = os.path.join(base_path, f'model_{surgery_type}_{comp}_v3.pkl')
+                model_file = f'model_{surgery_type}_{comp}_v3.pkl'
+                model_path = os.path.join(surgery_path, model_file)
+                
                 if not os.path.exists(model_path):
                     # Якщо немає v3, пробуємо v2 (зі статтю)
-                    model_path = os.path.join(base_path, f'model_{surgery_type}_{comp}_v2.pkl')
+                    model_file = f'model_{surgery_type}_{comp}_v2.pkl'
+                    model_path = os.path.join(surgery_path, model_file)
+                
                 if not os.path.exists(model_path):
                     # Якщо немає v2, пробуємо v1 (стару версію)
-                    model_path = os.path.join(base_path, f'model_{surgery_type}_{comp}.pkl')
-                models[surgery_type][comp] = joblib.load(model_path)
+                    model_file = f'model_{surgery_type}_{comp}.pkl'
+                    model_path = os.path.join(surgery_path, model_file)
+                
+                if os.path.exists(model_path):
+                    models[surgery_type][comp] = joblib.load(model_path)
+                else:
+                    st.warning(f"Модель {surgery_type}/{comp} не знайдена по шляху {model_path}")
+                    models[surgery_type][comp] = None
+            except Exception as e:
+                st.error(f"Помилка завантаження {surgery_type}/{comp}: {str(e)}")
+                models[surgery_type][comp] = None
+    
+    return models
+
             except:
                 models[surgery_type][comp] = None
     

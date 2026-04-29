@@ -1,0 +1,57 @@
+MIT License
+
+Copyright (c) 2024 Andrii P. Mazur, MD, PhD
+M.M. Amosov National Institute of Cardiovascular Surgery, Kyiv, Ukraine
+Department of Anesthesiology, Resuscitation and Extracorporeal Treatment Methods
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+DISCLAIMER:
+
+This software is provided for educational, research, and clinical research purposes.
+It is not intended to replace clinical judgment or medical decision-making.
+
+All predictions made by Digital Twin ICU models should be:
+1. Reviewed by qualified healthcare professionals
+2. Combined with clinical assessment
+3. Used as a decision-support tool only
+4. Not used as the sole basis for patient management decisions
+
+Users are responsible for ensuring compliance with local regulations, institutional
+policies, and ethical guidelines regarding the use of predictive algorithms in
+clinical practice.
+
+For commercial use or clinical deployment inquiries, contact:
+Andrii P. Mazur, MD, PhD
+paracelsus12@gmail.com
+
+---
+
+EXTERNAL DATA ATTRIBUTION:
+
+VitalDB Dataset:
+Lee JS, Lee CW, Huh JW, et al. "VitalDB, a high-fidelity multi-parameter vital 
+signs database in surgical patients." Scientific Data. 2019;6(1):18.
+https://github.com/vitaldb/vitaldb
+License: CC-BY-4.0
+
+Used for external validation of models. VitalDB is governed by its own separate
+license agreement. Please see https://vitaldb.net for details.

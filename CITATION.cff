@@ -1,0 +1,82 @@
+cff-version: 1.2.0
+title: Digital Twin ICU
+message: >-
+  If you use this software, please cite it using the metadata from this file.
+type: software
+authors:
+  - family-names: Mazur
+    given-names: Andrii P.
+    orcid: 'https://orcid.org/0000-0000-0000-0000'
+    affiliation: >-
+      M.M. Amosov National Institute of Cardiovascular Surgery,
+      Kyiv, Ukraine
+    email: paracelsus12@gmail.com
+  - family-names: Department of Anesthesiology
+    given-names: Resuscitation and Extracorporeal Treatment Methods
+    affiliation: >-
+      M.M. Amosov National Institute of Cardiovascular Surgery,
+      Kyiv, Ukraine
+
+identifiers:
+  - type: url
+    value: 'https://github.com/paracelsus12-crypto/digital-twin-icu'
+
+repository-code: 'https://github.com/paracelsus12-crypto/digital-twin-icu'
+url: 'https://digital-twin-icu.streamlit.app'
+repository-artifact: 'https://github.com/paracelsus12-crypto/digital-twin-icu/releases'
+
+abstract: >-
+  Digital Twin ICU is a comprehensive machine learning system containing
+  31 pre-trained Random Forest models for predicting postoperative complications
+  across 5 surgical specialties (cardiac, abdominal, thoracic, vascular, orthopedic).
+  The system predicts 6 universal complications (AKI, delirium, infection, respiratory)
+  plus specialty-specific complications with externally validated performance
+  on 6,388 patients (VitalDB dataset).
+
+keywords:
+  - machine learning
+  - postoperative complications
+  - surgical prediction
+  - random forest
+  - external validation
+  - healthcare AI
+  - cardiac surgery
+  - surgical risk prediction
+
+license: MIT
+commit: main
+version: 1.0.0
+date-released: '2026-04-29'
+
+references:
+  - type: dataset
+    authors:
+      - family-names: Lee
+        given-names: Jaewook S.
+      - family-names: Lee
+        given-names: Chul W.
+      - family-names: Huh
+        given-names: Jiwon W.
+    title: VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients
+    journal: Scientific Data
+    year: 2019
+    volume: 6
+    issue: 1
+    pages: 18
+    doi: '10.1038/s41597-019-0018-5'
+    url: 'https://github.com/vitaldb/vitaldb'
+
+  - type: software
+    authors:
+      - family-names: Pedregosa
+        given-names: F.
+      - family-names: Varoquaux
+        given-names: G.
+      - family-names: Gramfort
+        given-names: A.
+    title: 'scikit-learn: Machine Learning in Python'
+    journal: Journal of Machine Learning Research
+    year: 2011
+    volume: 12
+    pages: '2825-2830'
+    url: 'https://scikit-learn.org'

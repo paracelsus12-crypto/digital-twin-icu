@@ -1,0 +1,136 @@
+{
+  "cardiac": {
+    "aki": {
+      "accuracy": 0.68,
+      "auc": 0.7057142857142857
+    },
+    "delirium": {
+      "accuracy": 0.75,
+      "auc": 0.6074584199584199
+    },
+    "respiratory": {
+      "accuracy": 0.61,
+      "auc": 0.5754685220513971
+    },
+    "infection": {
+      "accuracy": 0.745,
+      "auc": 0.6790105169604503
+    },
+    "af": {
+      "accuracy": 0.625,
+      "auc": 0.7000811688311688
+    },
+    "lco": {
+      "accuracy": 0.66,
+      "auc": 0.6378358483621641
+    },
+    "stroke": {
+      "accuracy": 0.875,
+      "auc": 0.5804392236976507
+    }
+  },
+  "abdominal": {
+    "aki": {
+      "accuracy": 0.695,
+      "auc": 0.6830769230769231
+    },
+    "delirium": {
+      "accuracy": 0.665,
+      "auc": 0.6439925198690977
+    },
+    "respiratory": {
+      "accuracy": 0.64,
+      "auc": 0.6562401924887541
+    },
+    "infection": {
+      "accuracy": 0.7,
+      "auc": 0.6668399168399168
+    },
+    "anastomotic_leak": {
+      "accuracy": 0.745,
+      "auc": 0.6585691008739446
+    },
+    "ileus": {
+      "accuracy": 0.7,
+      "auc": 0.6014666666666667
+    }
+  },
+  "vascular": {
+    "aki": {
+      "accuracy": 0.69,
+      "auc": 0.7110714285714286
+    },
+    "delirium": {
+      "accuracy": 0.71,
+      "auc": 0.6963045634920635
+    },
+    "respiratory": {
+      "accuracy": 0.655,
+      "auc": 0.6543589743589744
+    },
+    "infection": {
+      "accuracy": 0.7,
+      "auc": 0.5681195175438597
+    },
+    "thrombosis": {
+      "accuracy": 0.72,
+      "auc": 0.599454365079365
+    },
+    "amputation": {
+      "accuracy": 0.745,
+      "auc": 0.6262808921036769
+    }
+  },
+  "orthopedic": {
+    "aki": {
+      "accuracy": 0.64,
+      "auc": 0.6248456963303782
+    },
+    "delirium": {
+      "accuracy": 0.69,
+      "auc": 0.6599532224532224
+    },
+    "respiratory": {
+      "accuracy": 0.66,
+      "auc": 0.6291491351098644
+    },
+    "infection": {
+      "accuracy": 0.715,
+      "auc": 0.5961290322580646
+    },
+    "vte": {
+      "accuracy": 0.585,
+      "auc": 0.5862299465240641
+    },
+    "pji": {
+      "accuracy": 0.81,
+      "auc": 0.6442831215970962
+    }
+  },
+  "thoracic": {
+    "aki": {
+      "accuracy": 0.675,
+      "auc": 0.7230933333333334
+    },
+    "delirium": {
+      "accuracy": 0.7,
+      "auc": 0.6785671354730136
+    },
+    "respiratory": {
+      "accuracy": 0.625,
+      "auc": 0.6172243672243672
+    },
+    "infection": {
+      "accuracy": 0.645,
+      "auc": 0.6069111923575893
+    },
+    "air_leak": {
+      "accuracy": 0.66,
+      "auc": 0.5773762765121759
+    },
+    "atelectasis": {
+      "accuracy": 0.655,
+      "auc": 0.632024882024882
+    }
+  }
+}

@@ -52,8 +52,46 @@ all_models = load_all_models()
 st.markdown("""
 <style>
 .main-header {font-size: 2.5rem; color: #1E3A8A; text-align: center; font-weight: bold;}
+.disclaimer-box {
+    background: #FFF8E1;
+    border: 2px solid #F59E0B;
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    max-width: 700px;
+    margin: 3rem auto;
+}
 </style>
 """, unsafe_allow_html=True)
+
+# ── DISCLAIMER GATE ──────────────────────────────────────────────────────────
+if "disclaimer_accepted" not in st.session_state:
+    st.session_state.disclaimer_accepted = False
+
+if not st.session_state.disclaimer_accepted:
+    st.markdown("""
+    <div class="disclaimer-box">
+        <h2 style="color:#B45309; text-align:center;">⚠️ УВАГА</h2>
+        <h3 style="color:#92400E; text-align:center;">Тільки для освітніх цілей</h3>
+        <p style="font-size:1.05rem; color:#374151;">
+            Дана програма є <strong>симулятором для навчання</strong>.
+            Дані, отримані за допомогою «Цифрового двійника», <strong>не можуть бути підставою</strong>
+            для встановлення діагнозу або призначення лікування реальним пацієнтам.
+        </p>
+        <p style="font-size:1.05rem; color:#374151;">
+            Використання будь-якої інформації з цього додатка у реальній медичній практиці
+            здійснюється на <strong>власний розсуд та під особисту відповідальність лікаря</strong>.
+            Автор не несе відповідальності за клінічні наслідки.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    col_l, col_btn, col_r = st.columns([2, 2, 2])
+    with col_btn:
+        if st.button("✅ Я згоден / Зрозуміло", use_container_width=True, type="primary"):
+            st.session_state.disclaimer_accepted = True
+            st.rerun()
+    st.stop()
+# ── END DISCLAIMER GATE ──────────────────────────────────────────────────────
 
 # Header
 st.markdown('<h1 class="main-header">❤️ ICU Digital Twin - Повна Версія</h1>', unsafe_allow_html=True)
